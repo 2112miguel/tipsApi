@@ -1,0 +1,15 @@
+$background: #c5e4e7;
+
+* {
+}
+
+body {
+  background-color: $background;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  height: 100vh;
+}
