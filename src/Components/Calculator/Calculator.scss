@@ -2,5 +2,15 @@ $bg-cal: #ffffff;
 
 .Calculator {
   background-color: $bg-cal;
-  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 766px;
+  height: 404px;
+}
+
+.Calculator-align {
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,16 @@
+.Result {
+  background-color: #00474b;
+  padding: 45px 0px 0px 33px;
+}
+
+.Result-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Result-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
