@@ -1,19 +1,21 @@
 import React from 'react';
 import './InitalValue.scss';
 
-const InitalValue = () => {
-  const [total, setTotal] = React.useState(0);
+const InitalValue = ({ state, setState }) => {
+  /* eslint react/prop-types: 0 */
+  const onChange = ({ target }) => {
+    setState({
+      ...state,
+      Total: target.value,
+    });
+  };
   return (
     <div>
       <input
         className="InitalValue"
         type="text"
-        value={total}
-        onChange={(e) => {
-          const value = e.target.value;
-          console.log(value);
-          setTotal(value);
-        }}
+        value="0"
+        onChange={onChange}
       ></input>
     </div>
   );

@@ -16,7 +16,7 @@ export const Tips = () => {
   return (
     <div className="Tips">
       {TipsNumber.map((item) => {
-        return <TipButton key={item} tip={item} />;
+        return <TipButton key={item.tip} item={item.tip} />;
       })}
       <ButtonCustom />
     </div>

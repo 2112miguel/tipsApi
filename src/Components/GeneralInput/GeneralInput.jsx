@@ -4,13 +4,14 @@ import Icon from '../Icon';
 import InitalValue from '../initalValue/InitalValue';
 import './GeneralInput.scss';
 
-const GeneralInput = () => {
+const GeneralInput = ({ text, icon, state, setState }) => {
+  /* eslint react/prop-types: 0 */
   return (
     <div className="flex-column">
-      <Label />
+      <Label text={text} />
       <div className="flex-row">
-        <Icon />
-        <InitalValue />
+        <Icon icon={icon} />
+        <InitalValue state={state} setState={setState} />
       </div>
     </div>
   );

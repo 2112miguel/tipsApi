@@ -1,20 +1,12 @@
 import React from 'react';
 import './Calculator.scss';
-import GeneralInput from '../GeneralInput';
-import { Tips } from '../Tips/Tips';
-import Result from '../Result/Result';
-const Calculator = () => {
+
+const Calculator = ({ children }) => {
+  /* eslint react/prop-types: 0 */
   return (
     <div className="">
       <div className="Calculator Calculator-align">
-        <div className="">
-          <GeneralInput />
-          <Tips />
-          <GeneralInput />
-        </div>
-        <div>
-          <Result />
-        </div>
+        <div className="">{children}</div>
       </div>
     </div>
   );
