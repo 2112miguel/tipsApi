@@ -2,7 +2,9 @@ import React from 'react';
 import './LabelResult.scss';
 
 const LabelResult = () => {
-  return <div className="LabelResult">label</div>;
+  /* eslint react/prop-types: 0 */
+
+  return <div className="LabelResult">Label</div>;
 };
 
 export default LabelResult;

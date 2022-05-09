@@ -11,12 +11,19 @@ const TipsNumber = [
   { tip: 50 },
 ];
 
-export const Tips = () => {
-  console.log(TipsNumber);
+export const Tips = ({ state, setState }) => {
+  /* eslint react/prop-types: 0 */
   return (
-    <div className="Tips">
+    <div className="d-flex flex-wrap w-75">
       {TipsNumber.map((item) => {
-        return <TipButton key={item.tip} item={item.tip} />;
+        return (
+          <TipButton
+            key={item.tip}
+            item={item.tip}
+            state={state}
+            setState={setState}
+          />
+        );
       })}
       <ButtonCustom />
     </div>

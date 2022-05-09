@@ -4,24 +4,28 @@ import LabelResult from '../LabelResult';
 import LabelResultPerson from '../LabelResultPerson';
 import LabelResultPrices from '../LabelResultPrices';
 import ButtonReset from '../ButtonReset';
-const Result = () => {
+
+const Result = ({ state, setState }) => {
+  /* eslint react/prop-types: 0 */
+  const byPerson = state.Total / state.Person;
+
   return (
-    <div className="Result">
+    <div className="Result rounded-3 m-2 p-5">
       <div className="Result-row">
         <div className="Result-column">
           <LabelResult />
           <LabelResultPerson />
         </div>
-        <LabelResultPrices />
+        <LabelResultPrices total={state.Total} />
       </div>
       <div className="Result-row">
         <div className="Result-column">
           <LabelResult />
           <LabelResultPerson />
         </div>
-        <LabelResultPrices />
+        <LabelResultPrices total={byPerson} />
       </div>
-      <ButtonReset />
+      <ButtonReset state={state} setState={setState} />
     </div>
   );
 };

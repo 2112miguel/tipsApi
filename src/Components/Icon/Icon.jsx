@@ -2,9 +2,8 @@ import React from 'react';
 import './Icon.scss';
 const Icon = ({ icon }) => {
   /* eslint react/prop-types: 0 */
-  console.log(icon);
   return (
-    <div className="">
+    <>
       <img
         className="Icon"
         src={
@@ -14,7 +13,7 @@ const Icon = ({ icon }) => {
         }
         alt=""
       />
-    </div>
+    </>
   );
 };
 
