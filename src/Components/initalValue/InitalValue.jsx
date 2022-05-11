@@ -3,12 +3,14 @@ import './InitalValue.scss';
 
 const InitalValue = ({ state, setState, icon }) => {
   /* eslint react/prop-types: 0 */
-  console.log(state);
   const onChange = ({ target }) => {
     if (icon === 'people') {
+      console.log(target.value);
+      const byPerson = state.Total / state.Person;
       setState({
         ...state,
         Person: target.value,
+        AmountByPerson: byPerson,
       });
     } else {
       setState({

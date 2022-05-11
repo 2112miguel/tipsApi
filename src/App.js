@@ -8,6 +8,7 @@ import Result from './Components/Result/Result';
 function App() {
   const [state, setState] = React.useState({
     Total: 0,
+    InitialTotal: 0,
     Tips: 0,
     TipsAmount: 0,
     Person: 1,

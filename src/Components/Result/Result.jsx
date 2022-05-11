@@ -7,8 +7,8 @@ import ButtonReset from '../ButtonReset';
 
 const Result = ({ state, setState }) => {
   /* eslint react/prop-types: 0 */
-  const byPerson = state.Total / state.Person;
 
+  console.log(state);
   return (
     <div className="Result rounded-3 m-2 p-5">
       <div className="Result-row">
@@ -23,7 +23,7 @@ const Result = ({ state, setState }) => {
           <LabelResult />
           <LabelResultPerson />
         </div>
-        <LabelResultPrices total={byPerson} />
+        <LabelResultPrices total={state.AmountByPerson} />
       </div>
       <ButtonReset state={state} setState={setState} />
     </div>
