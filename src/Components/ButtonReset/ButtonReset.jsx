@@ -1,10 +1,12 @@
 import React from 'react';
 import './ButtonReset.scss';
+import { CalculatorContext } from '../../Context/Calculator/CalculatorContext';
 
 const ButtonReset = ({ state, setState }) => {
-  console.log(state.Total);
-
+  const Context = React.useContext(CalculatorContext);
   const onChange = () => {
+    console.log(Context.state.AmountByPerson);
+    Context.resetInfo();
     setState({
       Total: 0,
       Tips: 0,

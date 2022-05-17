@@ -3,7 +3,7 @@ import './App.scss';
 import Calculator from './Components/Calculator';
 import GeneralInput from './Components/GeneralInput';
 import { Tips } from './Components/Tips/Tips';
-import Result from './Components/Result/Result';
+import { Result } from './Components/Result/Result';
 
 function App() {
   const [state, setState] = React.useState({
@@ -25,14 +25,14 @@ function App() {
               <section>
                 <GeneralInput
                   text="Bill"
-                  icon="dollar"
+                  icon="Total"
                   state={state}
                   setState={setState}
                 />
                 <Tips state={state} setState={setState} />
                 <GeneralInput
                   text="Number of People"
-                  icon="people"
+                  icon="Person"
                   state={state}
                   setState={setState}
                 />
